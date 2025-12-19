@@ -44,7 +44,7 @@ export function FiltersBar({
       <div className="space-y-2">
         <Label>Поиск</Label>
         <Input
-          placeholder="Company name..."
+          placeholder="Название компании..."
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
         />
@@ -66,12 +66,12 @@ export function FiltersBar({
 
       <div className="space-y-2">
         <Label>Сортировка</Label>
-        <div className="flex gap-2">
+        <div className="flex gap-2 w-100">
           <Select
             value={sortKey}
             onValueChange={(v) => onSortChange(v as any, sortDir)}
           >
-            <SelectTrigger className="w-25">
+            <SelectTrigger className="w-50">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>

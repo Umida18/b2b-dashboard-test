@@ -74,7 +74,6 @@ export function ClientTable({ clients }: ClientTableProps) {
                     const newStatus =
                       client.status === "active" ? "paused" : "active";
 
-                    // ✅ Подтверждение при паузе (безопасность!)
                     if (newStatus === "paused") {
                       const confirmed = confirm(
                         `Вы уверены, что хотите приостановить клиента?\n\n«${client.companyName}»\n\nЭто отключит доступ к платформе.`
@@ -82,7 +81,6 @@ export function ClientTable({ clients }: ClientTableProps) {
                       if (!confirmed) return;
                     }
 
-                    // ✅ Меняем статус
                     updateClientStatus(client.id, newStatus);
                   }}
                 >

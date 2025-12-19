@@ -33,9 +33,7 @@ export default function DashboardPage() {
     <div className="p-6 space-y-6">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Панель управления B2B-клиентами</h1>
-        <Button onClick={() => alert("Add client flow coming soon")}>
-          + Добавить клиента
-        </Button>
+        <Button>+ Добавить клиента</Button>
       </div>
 
       <Card>
